@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html layout:decorator="layout/layout" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+</head>
+
+<body>
+
+<!-- ============================================================== -->
+<!-- Container fluid  -->
+<!-- ============================================================== -->
+<div class="container-fluid" layout:fragment="content">
+    <!-- ============================================================== -->
+    <!-- Bread crumb and right sidebar toggle -->
+    <!-- ============================================================== -->
+    <div class="row page-titles">
+        <div class="col-md-5 col-8 align-self-center">
+            <h3 class="text-themecolor m-b-0 m-t-0">Profile</h3>
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="home">Home</a></li>
+                <li class="breadcrumb-item active">Profile</li>
+            </ol>
+        </div>
+    </div>
+    <!-- ============================================================== -->
+    <!-- End Bread crumb and right sidebar toggle -->
+    <!-- ============================================================== -->
+    <!-- ============================================================== -->
+    <!-- Start Page Content -->
+    <!-- ============================================================== -->
+    <!-- Row -->
+    <!-- Column -->
+    <div class="col-lg-4 col-xlg-3 col-md-7">
+        <div class="card">
+            <div class="card-block">
+                <form action="#" class="form-horizontal form-material" method="POST" th:action="@{/profile}"
+                      th:object="${profileForm}">
+                    <div class="form-group">
+                        <label class="col-md-12" for="firstName">First Name</label>
+                        <div class="col-md-12">
+                            <input class="form-control form-control-line" id="firstName" name="firstName"
+                                   th:field="*{firstName}" type="text">
+                        </div>
+                        <small class="text-danger-padded" th:errors="*{firstName}"
+                               th:if="${#fields.hasErrors('firstName')}"></small>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-12" for="lastName">Last Name</label>
+                        <div class="col-md-12">
+                            <input class="form-control form-control-line" id="lastName" name="lastName"
+                                   th:field="*{lastName}" type="text">
+                        </div>
+                        <small class="text-danger-padded" th:errors="*{lastName}"
+                               th:if="${#fields.hasErrors('lastName')}"></small>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-12" for="phone">Phone No</label>
+                        <div class="col-md-12">
+                            <input class="form-control form-control-line" id="phone" name="phone" th:field="*{phone}"
+                                   type="text">
+                        </div>
+                        <small class="text-danger-padded" th:errors="*{phone}"
+                               th:if="${#fields.hasErrors('phone')}"></small>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-12">
+                            <button class="btn btn-success">Update Profile</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- Column -->
+    <!-- Column -->
+    <div class="col-lg-4 col-xlg-3 col-md-5">
+        <div class="card">
+            <div class="card-block">
+                <form action="#" class="form-horizontal form-material" method="POST" th:action="@{/password}"
+                      th:object="${passwordForm}">
+                    <div class="form-group">
+                        <label class="col-md-12">Email</label>
+                        <div class="col-md-12">
+                            <input class="form-control form-control-line" readonly="readonly"
+                                   th:field="*{email}" type="text">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-12" for="password">Password</label>
+                        <div class="col-md-12">
+                            <input class="form-control form-control-line" id="password"
+                                   name="password" th:field="*{password}" type="password">
+                        </div>
+                        <small class="text-danger-padded" th:errors="*{password}"
+                               th:if="${#fields.hasErrors('password')}"></small>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-12">
+                            <button class="btn btn-success">Change Password</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- Column -->
+</div>
+<!-- Row -->
+<!-- ============================================================== -->
+<!-- End PAge Content -->
+<!-- ============================================================== -->
+</div>
+<!-- ============================================================== -->
+<!-- End Container fluid  -->
+<!-- ============================================================== -->
+</body>
+
+</html>

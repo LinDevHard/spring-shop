@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta content="" name="description">
+    <meta content="" name="author">
+    <!-- Favicon icon -->
+    <link href="../dashboard/assets/images/favicon.png" rel="icon" sizes="16x16" type="image/png">
+    <title>Material Pro Admin Template - The Most Complete & Trusted Bootstrap 4 Admin Template</title>
+    <!-- Bootstrap Core CSS -->
+    <link href="../dashboard/assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="../dashboard/html/css/style.css" rel="stylesheet">
+    <!-- You can change the theme colors from here -->
+    <link href="../dashboard/html/css/colors/blue.css" id="theme" rel="stylesheet">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body class="fix-header card-no-border">
+<!-- ============================================================== -->
+<!-- Main wrapper - style you can find in pages.scss -->
+<!-- ============================================================== -->
+<section class="error-page" id="wrapper">
+    <div class="error-box">
+        <div class="error-body text-center">
+            <h1>403</h1>
+            <h3 class="text-uppercase">Access is denied !</h3>
+            <div th:inline="text">Hello '[[${#httpServletRequest.remoteUser}]]',
+                you do not have permission to access this page.
+            </div>
+        </div>
+</section>
+<!-- ============================================================== -->
+<!-- End Wrapper -->
+<!-- ============================================================== -->
+<!-- ============================================================== -->
+<!-- All Jquery -->
+<!-- ============================================================== -->
+<script src="../dashboard/assets/plugins/jquery/jquery.min.js"></script>
+<!-- Bootstrap tether Core JavaScript -->
+<script src="../dashboard/assets/plugins/bootstrap/js/tether.min.js"></script>
+<script src="../dashboard/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+<!--Wave Effects -->
+<script src="../dashboard/html/js/waves.js"></script>
+</body>
+
+</html>

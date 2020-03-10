@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+>
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <title>Sign Up</title>
+    <!-- Favicon icon -->
+    <link href="favicon.png" rel="icon" type="image/png">
+
+    <!-- Font Icon -->
+    <link href="/auth/fonts/material-icon/css/material-design-iconic-font.min.css" rel="stylesheet">
+
+    <!-- Main css -->
+    <link href="/auth/css/style.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="main">
+    <!-- Sign up form -->
+    <section class="signup">
+        <div class="container">
+            <div class="signup-content">
+                <div class="signup-form">
+                    <h2 class="form-title">Sign up</h2>
+                    <form action="#" class="register-form" id="register-form" method="POST" th:action="@{/signup}"
+                          th:object="${adminSignupFormData}">
+                        <div class="form-group">
+                            <label for="firstName"><i class="zmdi zmdi-account material-icons-name"></i></label>
+                            <input id="firstName" name="firstName" placeholder="First Name" th:field="*{firstName}"
+                                   type="text"/>
+                            <small class="text-danger" th:errors="*{firstName}"
+                                   th:if="${#fields.hasErrors('firstName')}"></small>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="lastName"><i class="zmdi zmdi-account-o"></i></label>
+                            <input id="lastName" name="lastName" placeholder="Last Name" th:field="*{lastName}"
+                                   type="text"/>
+                            <small class="text-danger" th:errors="*{lastName}"
+                                   th:if="${#fields.hasErrors('lastName')}"></small>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email"><i class="zmdi zmdi-email"></i></label>
+                            <input id="email" name="email" placeholder="Your Email" th:field="*{email}" type="email"/>
+                            <small class="text-danger" th:errors="*{email}"
+                                   th:if="${#fields.hasErrors('email')}"></small>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="password"><i class="zmdi zmdi-lock"></i></label>
+                            <input id="password" name="password" placeholder="Password" th:field="*{password}"
+                                   type="password"/>
+                            <small class="text-danger" th:errors="*{password}"
+                                   th:if="${#fields.hasErrors('password')}"></small>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone"><i class="zmdi zmdi-phone"></i></label>
+                            <input id="phone" name="phone" placeholder="Contact Number" th:field="*{phone}"
+                                   type="text"/>
+                            <small class="text-danger" th:errors="*{phone}"
+                                   th:if="${#fields.hasErrors('phone')}"></small>
+                        </div>
+
+                        <div class="form-group">
+                            <input class="agree-term" id="agree-term" name="agree-term" type="checkbox"/>
+                            <label class="label-agree-term" for="agree-term"><span><span></span></span>I agree all
+                                statements in <a class="term-service" href="#">Terms of service</a></label>
+                        </div>
+
+                        <div class="form-group form-button">
+                            <input class="form-submit" id="signup" name="signup" type="submit" value="Register"/>
+                        </div>
+                    </form>
+                </div>
+                <div class="signup-image">
+                    <figure><img alt="sing up image" src="/auth/images/signup-image.jpg"></figure>
+                    <a class="signup-image-link" href="/login">I am already member</a>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<!-- JS -->
+<script src="/auth/vendor/jquery/jquery.min.js"></script>
+</body>
+</html>
