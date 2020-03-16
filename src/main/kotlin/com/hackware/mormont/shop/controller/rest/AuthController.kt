@@ -16,6 +16,7 @@ import javax.validation.Valid
 @RequestMapping("api")
 class AuthController {
 
+
     @Autowired
     private lateinit var authService: AuthService
 

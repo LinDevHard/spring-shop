@@ -1,6 +1,7 @@
 package com.hackware.mormont.shop.service.user
 
 import com.hackware.mormont.shop.dto.user.UserDto
+import com.hackware.mormont.shop.model.user.User
 
 
 interface UserService {
@@ -37,4 +38,26 @@ interface UserService {
      */
     fun changePassword(userDto: UserDto, newPassword: String): UserDto
 
+    /**
+     * Get user by email
+     *
+     * @param name
+     * @return
+     */
+    fun getUserByName(name: String): User
+
+    /**
+     * Get all users
+     *
+     * @return
+     */
+    fun getAllUsers(): List<UserDto>
+
+
+    /**
+     * Delete user by user name(email)
+     *
+     * @return
+     */
+    fun deleteUserByName(name: String)
 }

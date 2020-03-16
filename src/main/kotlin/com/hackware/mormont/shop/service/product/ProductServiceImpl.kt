@@ -73,11 +73,14 @@ class ProductServiceImpl : ProductService {
     }
 
     override fun getProductDetail(productId: Long): ProductDetailDto {
-        val product = productRepository.findById(productId)
+       return findProductById(productId).mapToProductDetailDto()
+    }
 
+    override fun findProductById(productId: Long): Product {
+        val product = productRepository.findById(productId)
         if (product.isEmpty)
             throw exception(EntityType.PRODUCT, ExceptionType.ENTITY_NOT_FOUND, productId.toString())
 
-        return product.get().mapToProductDetailDto()
+        return product.get()
     }
 }
