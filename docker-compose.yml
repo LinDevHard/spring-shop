@@ -1,0 +1,26 @@
+version: '3'
+services:
+  db:
+    image: postgres:12
+    network_mode: bridge
+    container_name: shop-postgres
+    expose:
+      - 5432
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_USER: lindevhard
+      POSTGRES_PASSWORD: shoptest
+      POSTGRES_DB: shop_db
+    restart: always
+
+  backend:
+    build: .
+    container_name: spring-shop
+    network_mode: bridge
+    ports:
+      - "8080:8080"
+    depends_on:
+      - db
+    links:
+      - db
