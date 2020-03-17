@@ -38,6 +38,5 @@ http://localhost:8080/swagger-ui.html
 Open markdown [DOCS.md]
 
 
-
-[DOCS.md]: https://gitlab.com/LinDevHard/demo-spring-shop/docs/DOCS.md
-[database_structure]: https://gitlab.com/LinDevHard/demo-spring-shop/pic/db.png
+[DOCS.md]: https://gitlab.com/LinDevHard/demo-spring-shop/blob/master/docs/DOCS.md
+[database_structure]: https://gitlab.com/LinDevHard/demo-spring-shop/raw/master/pic/db.png
