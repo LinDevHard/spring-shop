@@ -1,5 +1,5 @@
 # Spring Shop
-Тестовый проект, который был создан с целью познать дзен Spring и бэкенед разработки. Результатом стал Spring REST Api для простого магазина.
+A test project that was created to learn Spring Zen and backend development. The result was Spring REST Api for a simple store.
 ###### Developed by LinDevHard
 
 
@@ -21,13 +21,14 @@
 
 
 ## Build
-Приложение было создано с использованием Docker, для сборки и запуска используте `docker-compose`
+The application was created using Docker, use `docker-compose` to build and run
+
 ```bash
 docker-compose up --build
 ```
 
 ## Docs
-Документация представленна в Swagger и Markdown
+Documentation provided by Swagger and Markdown
 ### Swagger
 
 ```url
@@ -38,5 +39,5 @@ http://localhost:8080/swagger-ui.html
 Open markdown [DOCS.md]
 
 
-[DOCS.md]: https://gitlab.com/LinDevHard/demo-spring-shop/blob/master/docs/DOCS.md
-[database_structure]: https://gitlab.com/LinDevHard/demo-spring-shop/raw/master/pic/db.png
+[DOCS.md]: https://github.com/LinDevHard/spring-shop/blob/master/docs/DOCS.md
+[database_structure]: https://github.com/LinDevHard/spring-shop/blob/master/pic/db.png
